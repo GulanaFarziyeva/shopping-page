@@ -1,10 +1,11 @@
 import AppHeader from "../../components/layout/AppHeader";
 import Hero from "./Hero";
 import Productlist from "./Productlist";
+import AppFooter from "../../components/layout/AppFooter";
 
 const Shop = () => {
   return (
-    <div>
+    <>
       <AppHeader
         logo="https://cdn.shopify.com/s/files/1/0250/7918/5456/t/14/assets/oslo-logo-white_400x.png?v=20527188679633558461593456254"
         color="text-white"
@@ -12,7 +13,8 @@ const Shop = () => {
       />
       <Hero />
       <Productlist />
-    </div>
+      <AppFooter />
+    </>
   );
 };
 export default Shop;

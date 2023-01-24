@@ -9,32 +9,73 @@
   font-family: "IBM Plex Serif", serif;
 }
 
-body{
-  overflow-x: hidden;
+body {
+  overflow-x: hidden !important;
 }
 
-.cart:hover .cart-zoom-img{
+.cart:hover .cart-zoom-img {
   display: block;
   transition: all 1s ease;
 }
 
-.cart:hover .cart-img{
+.cart:hover .cart-img {
   display: none;
   transition: all 1s ease;
 }
 
-.cart:hover .overlay{
+.cart:hover .overlay {
   display: flex;
   animation-name: move;
   animation-timing-function: ease-in-out;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
 }
 
 @keyframes move {
   0% {
-  height: 30px;
+    height: 30px;
   }
   100% {
     height: 80px;
   }
+}
+
+.responsive-menu {
+  animation-name: menu;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.2s;
+  transition: all 0.5s ease;
+}
+
+@keyframes menu {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.hero-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://cdn.shopify.com/s/files/1/0250/7918/5456/collections/140726.567_Chris_Nicholson_126aeb69-ed85-43cb-a4eb-2878c2e0ee23_1512x.jpg?v=1568746167);
+  background-size: cover;
+  height: 420px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.hover-item:hover {
+  transition: all 0.5s ease;
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  .hero-img {
+    height: 350px;
+  }
+}
+
+.container{
+  max-width: 1440px !important;
+  margin: auto;
 }
